@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="calcolatrice"/>
+        <attribute name="authors" value="waffl"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-24 05:25:57 "/>
+        <attribute name="created" value="d2FmZmw7TEVMRTsyMDI0LTEwLTI0OyIwNDoxMzo1MCAiOzIwMDE="/>
+        <attribute name="edited" value="d2FmZmw7TEVMRTsyMDI0LTEwLTI0OyIwNToyNTo1NyAiOzM7MjEyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="risultato = 0"/>
+            <declare name="risultato" type="Integer" array="False" size=""/>
+            <declare name="x, y" type="Integer" array="False" size=""/>
+            <declare name="operazione" type="String" array="False" size=""/>
+            <output expression="&quot;Operazione da fare&quot;" newline="True"/>
+            <input variable="operazione"/>
+            <output expression="&quot;Valore primo numero&quot;" newline="True"/>
+            <input variable="x"/>
+            <output expression="&quot;valore secondo numero&quot;" newline="True"/>
+            <input variable="y"/>
+            <if expression="operazione = &quot;+&quot; || operazione= &quot;addizione&quot;">
+                <then>
+                    <assign variable="risultato" expression="x + y"/>
+                    <output expression="risultato" newline="True"/>
+                </then>
+                <else>
+                    <if expression="operazione=&quot;-&quot; || operazione=&quot;sottrazione&quot;">
+                        <then>
+                            <assign variable="risultato" expression="x-y"/>
+                            <output expression="risultato" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="operazione=&quot;*&quot; || operazione=&quot;moltiplicazione&quot;">
+                                <then>
+                                    <assign variable="risultato" expression="x*y"/>
+                                    <output expression="risultato" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="operazione= &quot;/&quot; || operazione= &quot;divisione&quot;">
+                                        <then>
+                                            <assign variable="risultato" expression="x/y"/>
+                                            <output expression="risultato" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;L'operazione che hai fornito non &#232; valida&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
